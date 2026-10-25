@@ -3,7 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Compact · Entrenos</title>
+<title>Atleta Híbrido</title>
+<meta name="theme-color" content="#201e1d">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAIAAADdvvtQAAACQUlEQVR4nO3csWnDQBiA0Tik9QgW3sBNpvDAniKNVsgKWSBtKov4EycJ3qsFd+g+/kIcOl2nyxu86n3rDXBsAiIREImASAREIiASAZEIiERAJAIiERCJgEgERCIgEgGRCIhEQCQCIhEQiYBIBEQiIBIBkQiIREAkAiIREImASAREIiASAZEIiERAJAIiERCJgEgERCIgEgGRCIhEQCQCIhEQiYBIBEQiIBIBkQiIREAkAiIREImASAREIiASAZEIiERAJB+D15vnr+cP3G6fY3ZyXLt6hyYQiYBIBEQiIBIBkQiIREAkAiIREMk6X6If3+fnD9ynn1UW4l8GnIsJRCIgEgGRCIhEQCQCIhEQiYBIBEQiIBIBkQiIREAkAiIREImASAREIiASAZEIiGT0710WLd4DZ1dMIBIBkQiIREAkAiIREImASAREIiASAZEIiERAJAIiERDJ7q5z+JvionnrDfxlApEIiERAJAIiERCJgEgERCIgEgGRCIhEQCQCIhEQiYBIBEQiIBIBkQiIREAkAiJZ51K9m/D7NOBcTCASAZEIiERAJAIiERCJgEgERCIgktN1umy9Bw7MBCIREImASAREIiASAZEIiERAJAIiERCJgEgERCIgEgGRCIhEQCQCIhEQiYBIBEQiIBIBkQiIREAkAiIREImASAREIiASAZEIiERAJAIiERCJgEgERCIgEgGRCIhEQCQCIhEQiYBIBEQiIBIBkQiIREAkAiIREImASAREIiASAZEIiERAJL8b9BTGNtLXswAAAABJRU5ErkJggg==">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Atleta Híbrido">
 <style>
 :root{--bg:#faf9f5;--card:#fff;--ink:#201e1d;--mut:#6c6a66;--line:#e7e4dd;--red:#d6002a;--ok:#1a7f45;--chip:#efece6}
 @media(prefers-color-scheme:dark){:root{--bg:#161514;--card:#201e1d;--ink:#f1efe9;--mut:#9a968e;--line:#322f2c;--chip:#2a2825}}
@@ -62,7 +68,7 @@ footer .pri{background:var(--red);color:#fff;border-color:var(--red)}
 <body>
 <div class="wrap">
   <header>
-    <div class="hd"><b>Compact · Entrenos</b><span style="font-size:11px;color:var(--mut)" id="prog"></span></div>
+    <div class="hd"><b>Atleta Híbrido</b><span style="font-size:11px;color:var(--mut)" id="prog"></span></div>
     <div class="rm" id="rm"></div>
     <div class="ciclos" id="nav"></div>
   </header>
@@ -194,6 +200,7 @@ document.getElementById("rm").addEventListener("click",()=>{
 });
 
 renderNav();renderMain();save();
+if("serviceWorker"in navigator){addEventListener("load",()=>{navigator.serviceWorker.register("sw.js").catch(()=>{})})}
 </script>
 </body>
 </html>
